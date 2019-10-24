@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: repo checkout
+      run: |
+        repo init -u git://github.com/couchbase/manifest.git -m branch-master.xml -g default,kv
+        repo sync -j8
     - uses: actions/checkout@v1
     - name: configure
       run: |
