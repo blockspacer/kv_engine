@@ -12,8 +12,8 @@ jobs:
     - name: configure
       run: |
         mkdir build
-        cd build && cmake -G Ninja ..
+        cd build && cmake ..
     - name: make
-      run: ninja
+      run: make
     - name: test
       run: ctest
